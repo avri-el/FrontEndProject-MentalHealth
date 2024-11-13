@@ -1,5 +1,7 @@
 import Spinner from "./components/Spinner";
 import Topbar from "./components/Topbar";
+import Team from "./components/Team";
+import Testimonial from "./components/Testimonial";
 const App = () => {
   return (
     <div>
@@ -351,122 +353,7 @@ const App = () => {
         </div>
         {/* Feature End */}
         {/* Team Start */}
-        <div className="container-xxl py-5">
-          <div className="container">
-            <div
-              className="text-center mx-auto mb-5 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{ maxWidth: 600 }}
-            >
-              <p className="d-inline-block border rounded-pill py-1 px-4">
-                Doctors
-              </p>
-              <h1>Our Experience Doctors</h1>
-            </div>
-            <div className="row g-4">
-              <div
-                className="col-lg-3 col-md-6 wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div className="team-item position-relative rounded overflow-hidden">
-                  <div className="overflow-hidden">
-                    <img className="img-fluid" src="img/team-1.jpg" alt />
-                  </div>
-                  <div className="team-text bg-light text-center p-4">
-                    <h5>Dr. Praysi Leony, M.Psi</h5>
-                    <p className="text-primary">Clinical Psychology</p>
-                    <div className="team-social text-center">
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-twitter" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 wow fadeInUp"
-                data-wow-delay="0.3s"
-              >
-                <div className="team-item position-relative rounded overflow-hidden">
-                  <div className="overflow-hidden">
-                    <img className="img-fluid" src="img/team-2.jpg" alt />
-                  </div>
-                  <div className="team-text bg-light text-center p-4">
-                    <h5>Dr. Dave Gevariel, M.Psi</h5>
-                    <p className="text-primary">Developmental Psychology</p>
-                    <div className="team-social text-center">
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-twitter" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 wow fadeInUp"
-                data-wow-delay="0.5s"
-              >
-                <div className="team-item position-relative rounded overflow-hidden">
-                  <div className="overflow-hidden">
-                    <img className="img-fluid" src="img/team-3.jpg" alt />
-                  </div>
-                  <div className="team-text bg-light text-center p-4">
-                    <h5>Dr. Tzuyu Chou, M.Psi</h5>
-                    <p className="text-primary">Counseling Psychology</p>
-                    <div className="team-social text-center">
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-twitter" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 wow fadeInUp"
-                data-wow-delay="0.7s"
-              >
-                <div className="team-item position-relative rounded overflow-hidden">
-                  <div className="overflow-hidden">
-                    <img className="img-fluid" src="img/team-4.jpg" alt />
-                  </div>
-                  <div className="team-text bg-light text-center p-4">
-                    <h5>Dr. Levin Raven, M.Psi</h5>
-                    <p className="text-primary">Health Psychology</p>
-                    <div className="team-social text-center">
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-twitter" />
-                      </a>
-                      <a className="btn btn-square" href>
-                        <i className="fab fa-instagram" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Team />
         {/* Team End */}
         {/* Appointment Start */}
         <div className="container-xxl py-5">
@@ -609,85 +496,7 @@ const App = () => {
         </div>
         {/* Appointment End */}
         {/* Testimonial Start */}
-        <div className="container-xxl py-5">
-          <div className="container">
-            <div
-              className="text-center mx-auto mb-5 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{ maxWidth: 600 }}
-            >
-              <p className="d-inline-block border rounded-pill py-1 px-4">
-                Testimonial
-              </p>
-              <h1>What Say Our Patients!</h1>
-            </div>
-            <div
-              className="owl-carousel testimonial-carousel wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <div className="testimonial-item text-center">
-                <img
-                  className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-                  src="img/testimonial-1.jpg"
-                  style={{ width: 100, height: 100 }}
-                />
-                <div className="testimonial-text rounded text-center p-4">
-                  <p>
-                    I've been dealing with a lot of stress and this platform has
-                    been a game-changer for me. The consultants are so easy to
-                    talk to, and the articles and videos really helped me
-                    understand what I'm going through. I feel much more in
-                    control of my mental health now and have the tools I need to
-                    handle things better. I'm really grateful for all the
-                    support.
-                  </p>
-                  <h5 className="mb-1">Izabelle Margarette</h5>
-                  <span className="fst-italic">Accountant</span>
-                </div>
-              </div>
-              <div className="testimonial-item text-center">
-                <img
-                  className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-                  src="img/testimonial-2.jpg"
-                  style={{ width: 100, height: 100 }}
-                />
-                <div className="testimonial-text rounded text-center p-4">
-                  <p>
-                    For the longest time, I've been battling anxiety, and it
-                    felt like no one understood. I decided to give this website
-                    a shot, and it's been a total turning point for me. The
-                    resources here, from the expert advice to the helpful
-                    articles, have given me a better understanding of what I'm
-                    going through. I now feel more confident and equipped to
-                    handle things, and I'm so glad I found this platform.
-                  </p>
-                  <h5 className="mb-1">James Kavinsky</h5>
-                  <span className="fst-italic">Videographer</span>
-                </div>
-              </div>
-              <div className="testimonial-item text-center">
-                <img
-                  className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-                  src="img/testimonial-3.jpg"
-                  style={{ width: 100, height: 100 }}
-                />
-                <div className="testimonial-text rounded text-center p-4">
-                  <p>
-                    I've never been one to talk openly about my mental health,
-                    but I was really at a breaking point. This website made it
-                    so much easier to find the help I needed. The consultants
-                    were understanding and gave me practical tips that I could
-                    actually apply in my everyday life. The videos and stories
-                    on the site also gave me hope that I wasn't alone in what I
-                    was going through. I feel like I'm on the right path now.
-                  </p>
-                  <h5 className="mb-1">Jonathan Rodriges</h5>
-                  <span className="fst-italic">Technician</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Testimonial />
         {/* Testimonial End */}
         {/* Footer Start */}
         <div
