@@ -1,82 +1,20 @@
-import HeadComponent from "./components/HeadComponents";
-import Spinner from "./components/Spinner";
+// import Spinner from "./components/Spinner";
 import Topbar from "./components/Topbar";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Feature from "./components/Feature";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div>
-      <HeadComponent />
-      <Spinner />
+      {/* <Spinner /> */}
       <Topbar />
-      {/* Navbar Start */}
-      <nav
-        className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn"
-        data-wow-delay="0.1s"
-      >
-        <a
-          href="index.html"
-          className="navbar-brand d-flex align-items-center px-4 px-lg-5"
-        >
-          <h1 className="m-0 text-primary">
-            <i className="far fa-hospital me-3" />
-            MHC
-          </h1>
-        </a>
-        <button
-          type="button"
-          className="navbar-toggler me-4"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
-          <a
-            href
-            className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
-          >
-            Appointment
-            <i className="fa fa-arrow-right ms-3" />
-          </a>
-        </div>
-      </nav>
-      {/* Navbar End */}
-      {/* Header Start */}
-      <div className="container-fluid header bg-primary p-0 mb-5">
-        <div className="row g-0 align-items-center flex-column-reverse flex-lg-row">
-          <div className="col-lg-6 p-5 wow fadeIn" data-wow-delay="0.1s">
-            <h1 className="display-4 text-white mb-5">
-              Caring for your mind is the first step toward a brighter,
-              healthier you.
-            </h1>
-          </div>
-          <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-            <div className="owl-carousel header-carousel">
-              <div className="owl-carousel-item position-relative">
-                <img className="img-fluid" src="img/carousel-1.jpg" alt />
-                <div className="owl-carousel-text">
-                  <h1 className="display-1 text-white mb-0">Balance</h1>
-                </div>
-              </div>
-              <div className="owl-carousel-item position-relative">
-                <img className="img-fluid" src="img/carousel-2.jpg" alt />
-                <div className="owl-carousel-text">
-                  <h1 className="display-1 text-white mb-0">Calm</h1>
-                </div>
-              </div>
-              <div className="owl-carousel-item position-relative">
-                <img className="img-fluid" src="img/carousel-3.jpg" alt />
-                <div className="owl-carousel-text">
-                  <h1 className="display-1 text-white mb-0">Support</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Header End */}
+      <Navbar />
+      <Header />
+
       {/* About Start */}
       <div className="container-xxl py-5">
         <div className="container">
@@ -253,375 +191,163 @@ const App = () => {
       </div>
       {/* Article End */}
       {/* Feature Start */}
-      <div className="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
-        <div className="container feature px-lg-0">
-          <div className="row g-0 mx-lg-0">
-            <div
-              className="col-lg-6 feature-text py-5 wow fadeIn"
-              data-wow-delay="0.1s"
-            >
-              <div className="p-lg-5 ps-lg-0">
-                <p className="d-inline-block border rounded-pill text-light py-1 px-4">
-                  Programs
-                </p>
-                <h1 className="text-white mb-4">
-                  Mental Health Programs and Support
-                </h1>
-                <p className="text-white mb-4 pb-2">
-                  We offer a variety of mental health programs, support groups,
-                  and workshops that you can join to receive support and improve
-                  your mental well-being. Join us for a positive and enriching
-                  experience.
-                </p>
-                <div className="row g-4">
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <div
-                        className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light"
-                        style={{ width: 55, height: 55 }}
-                      >
-                        <i className="fa fa-user-md text-primary" />
-                      </div>
-                      <div className="ms-4">
-                        <p className="text-white mb-2">Experience</p>
-                        <h5 className="text-white mb-0">Doctors</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <div
-                        className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light"
-                        style={{ width: 55, height: 55 }}
-                      >
-                        <i className="fa fa-users text-primary" />
-                      </div>
-                      <div className="ms-4">
-                        <p className="text-white mb-2">Community</p>
-                        <h5 className="text-white mb-0">Support Group</h5>
-                        <i className="fa fa-check text-primary" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6">
-                    <div className="d-flex align-items-center">
-                      <div
-                        className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light"
-                        style={{ width: 55, height: 55 }}
-                      >
-                        <i className="fa fa-brain text-primary" />
-                      </div>
-                      <div className="ms-4">
-                        <p className="text-white mb-2">Development</p>
-                        <h5 className="text-white mb-0">Workshop</h5>
-                        <i className="fa fa-comment-medical text-primary" />
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="d-flex align-items-center">
-                        <div
-                          className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light"
-                          style={{ width: 55, height: 55 }}
-                        >
-                          <i className="fa fa-calendar-alt text-primary" />
-                        </div>
-                        <div className="ms-4">
-                          <p className="text-white mb-2">Schedule</p>
-                          <h5 className="text-white mb-0">Programs</h5>
-                          <i className="fa fa-headphones text-primary" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-lg-6 pe-lg-0 wow fadeIn"
-                data-wow-delay="0.5s"
-                style={{ minHeight: 400 }}
-              >
-                <div className="position-relative h-100">
-                  <img
-                    className="position-absolute img-fluid w-100 h-100"
-                    src="pexels-jopwell-2422290.jpg"
-                    style={{ objectFit: "cover" }}
-                    alt="Mental Health Programs"
-                  />
-                  &gt;&gt;&gt;&gt;&gt;&gt;
-                  4b290465281cddef9465427ab332d06465d97247 /&gt;
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Feature End */}
-        {/* Team Start */}
-        <Team />
-        {/* Team End */}
-        {/* Appointment Start */}
-        <div className="container-xxl py-5">
-          <div className="container">
-            <div className="row g-5">
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p className="d-inline-block border rounded-pill py-1 px-4">
-                  Appointment
-                </p>
-                <h1 className="mb-4">
-                  Make An Appointment To Visit Our Doctor
-                </h1>
-                <p className="mb-4">
-                  Taking the first step towards mental well-being is just a
-                  click away. Make an appointment to visit one of our
-                  experienced doctors today and begin your journey towards
-                  healing. Our compassionate team is here to listen, understand,
-                  and provide the support you need. Don’t wait—your mental
-                  health is important, and we’re here to help you every step of
-                  the way
-                </p>
-                <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
-                  <div
-                    className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
-                    style={{ width: 55, height: 55 }}
-                  >
-                    <i className="fa fa-phone-alt text-primary" />
-                  </div>
-                  <div className="ms-4">
-                    <p className="mb-2">Call Us Now</p>
-                    <h5 className="mb-0">+62 345 6789</h5>
-                  </div>
-                </div>
-                <div className="bg-light rounded d-flex align-items-center p-5">
-                  <div
-                    className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
-                    style={{ width: 55, height: 55 }}
-                  >
-                    <i className="fa fa-envelope-open text-primary" />
-                  </div>
-                  <div className="ms-4">
-                    <p className="mb-2">Mail Us Now</p>
-                    <h5 className="mb-0">mentalhealth@gmail.com</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div className="bg-light rounded h-100 d-flex align-items-center p-5">
-                  <form>
-                    <div className="row g-3">
-                      <div className="col-12 col-sm-6">
-                        <input
-                          type="text"
-                          className="form-control border-0"
-                          placeholder="Your Name"
-                          style={{ height: 55 }}
-                        />
-                      </div>
-                      <div className="col-12 col-sm-6">
-                        <input
-                          type="email"
-                          className="form-control border-0"
-                          placeholder="Your Email"
-                          style={{ height: 55 }}
-                        />
-                      </div>
-                      <div className="col-12 col-sm-6">
-                        <input
-                          type="text"
-                          className="form-control border-0"
-                          placeholder="Your Mobile"
-                          style={{ height: 55 }}
-                        />
-                      </div>
-                      <div className="col-12 col-sm-6">
-                        <select
-                          className="form-select border-0"
-                          style={{ height: 55 }}
-                        >
-                          <option selected>Choose Doctor</option>
-                          <option value={1}>Doctor 1</option>
-                          <option value={2}>Doctor 2</option>
-                          <option value={3}>Doctor 3</option>
-                        </select>
-                      </div>
-                      <div className="col-12 col-sm-6">
-                        <div
-                          className="date"
-                          id="date"
-                          data-target-input="nearest"
-                        >
-                          <input
-                            type="text"
-                            className="form-control border-0 datetimepicker-input"
-                            placeholder="Choose Date"
-                            data-target="#date"
-                            data-toggle="datetimepicker"
-                            style={{ height: 55 }}
-                          />
-                        </div>
-                      </div>
-                      <div className="col-12 col-sm-6">
-                        <div
-                          className="time"
-                          id="time"
-                          data-target-input="nearest"
-                        >
-                          <input
-                            type="text"
-                            className="form-control border-0 datetimepicker-input"
-                            placeholder="Choose Date"
-                            data-target="#time"
-                            data-toggle="datetimepicker"
-                            style={{ height: 55 }}
-                          />
-                        </div>
-                      </div>
-                      <div className="col-12">
-                        <textarea
-                          className="form-control border-0"
-                          rows={5}
-                          placeholder="Describe your problem"
-                          defaultValue={""}
-                        />
-                      </div>
-                      <div className="col-12">
-                        <button
-                          className="btn btn-primary w-100 py-3"
-                          type="submit"
-                        >
-                          Book Appointment
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Appointment End */}
-        {/* Testimonial Start */}
-        <Testimonial />
-        {/* Testimonial End */}
-        {/* Footer Start */}
-        <div
-          className="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn"
-          data-wow-delay="0.1s"
-        >
-          <div className="container py-5">
-            <div className="row g-5">
-              <div className="col-lg-3 col-md-6">
-                <p className="mb-2">
-                  <i className="fa fa-map-marker-alt me-3" />
-                  Jl. Sudirman No. 45, Jakarta Selatan, 12930, Indonesia
-                </p>
-                <p className="mb-2">
-                  <i className="fa fa-phone-alt me-3" />
-                  +62 345 67890
-                </p>
-                <p className="mb-2">
-                  <i className="fa fa-envelope me-3" />
-                  mentalhealth@example.com
-                </p>
-                <div className="d-flex pt-2">
-                  <a
-                    className="btn btn-outline-light btn-social rounded-circle"
-                    href
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a
-                    className="btn btn-outline-light btn-social rounded-circle"
-                    href
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                  <a
-                    className="btn btn-outline-light btn-social rounded-circle"
-                    href
-                  >
-                    <i className="fab fa-youtube" />
-                  </a>
-                  <a
-                    className="btn btn-outline-light btn-social rounded-circle"
-                    href
-                  >
-                    <i className="fab fa-linkedin-in" />
-                  </a>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6">
-                <h5 className="text-light mb-4">Quick Links</h5>
-                <a className="btn btn-link" href>
-                  About Us
-                </a>
-                <a className="btn btn-link" href>
-                  Contact Us
-                </a>
-                <a className="btn btn-link" href>
-                  Our Services
-                </a>
-                <a className="btn btn-link" href>
-                  Terms &amp; Condition
-                </a>
-                <a className="btn btn-link" href>
-                  Support
-                </a>
-              </div>
-              <div className="col-lg-3 col-md-6">
-                <h5 className="text-light mb-4">Newsletter</h5>
-                <p>
-                  Subscribe to our newsletter for the latest updates and tips on
-                  mental well-being.
-                </p>
+      <Feature />
+      {/* Feature Start */}
+      {/* Team Start */}
+      <Team />
+      {/* Team End */}
+      {/* Appointment Start */}
+      <div className="container-xxl py-5">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <p className="d-inline-block border rounded-pill py-1 px-4">
+                Appointment
+              </p>
+              <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
+              <p className="mb-4">
+                Taking the first step towards mental well-being is just a click
+                away. Make an appointment to visit one of our experienced
+                doctors today and begin your journey towards healing. Our
+                compassionate team is here to listen, understand, and provide
+                the support you need. Don’t wait—your mental health is
+                important, and we’re here to help you every step of the way
+              </p>
+              <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
                 <div
-                  className="position-relative mx-auto"
-                  style={{ maxWidth: 400 }}
+                  className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                  style={{ width: 55, height: 55 }}
                 >
-                  <input
-                    className="form-control border-0 w-100 py-3 ps-4 pe-5"
-                    type="text"
-                    placeholder="Your email"
-                  />
-                  <button
-                    type="button"
-                    className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
-                  >
-                    SignUp
-                  </button>
+                  <i className="fa fa-phone-alt text-primary" />
+                </div>
+                <div className="ms-4">
+                  <p className="mb-2">Call Us Now</p>
+                  <h5 className="mb-0">+62 345 6789</h5>
+                </div>
+              </div>
+              <div className="bg-light rounded d-flex align-items-center p-5">
+                <div
+                  className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                  style={{ width: 55, height: 55 }}
+                >
+                  <i className="fa fa-envelope-open text-primary" />
+                </div>
+                <div className="ms-4">
+                  <p className="mb-2">Mail Us Now</p>
+                  <h5 className="mb-0">mentalhealth@gmail.com</h5>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="container">
-            <div className="copyright">
-              <div className="row">
-                <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                  ©
-                  <a className="border-bottom" href="#">
-                    Mental Health Consultant
-                  </a>
-                  , All Right Reserved.
-                </div>
-                <div className="col-md-6 text-center text-md-end">
-                  Designed By
-                  <a className="border-bottom" href="https://htmlcodex.com">
-                    HTML Codex
-                  </a>
-                </div>
+            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div className="bg-light rounded h-100 d-flex align-items-center p-5">
+                <form>
+                  <div className="row g-3">
+                    <div className="col-12 col-sm-6">
+                      <input
+                        type="text"
+                        className="form-control border-0"
+                        placeholder="Your Name"
+                        style={{ height: 55 }}
+                      />
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <input
+                        type="email"
+                        className="form-control border-0"
+                        placeholder="Your Email"
+                        style={{ height: 55 }}
+                      />
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <input
+                        type="text"
+                        className="form-control border-0"
+                        placeholder="Your Mobile"
+                        style={{ height: 55 }}
+                      />
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <select
+                        className="form-select border-0"
+                        style={{ height: 55 }}
+                      >
+                        <option selected>Choose Doctor</option>
+                        <option value={1}>Doctor 1</option>
+                        <option value={2}>Doctor 2</option>
+                        <option value={3}>Doctor 3</option>
+                      </select>
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <div
+                        className="date"
+                        id="date"
+                        data-target-input="nearest"
+                      >
+                        <input
+                          type="text"
+                          className="form-control border-0 datetimepicker-input"
+                          placeholder="Choose Date"
+                          data-target="#date"
+                          data-toggle="datetimepicker"
+                          style={{ height: 55 }}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <div
+                        className="time"
+                        id="time"
+                        data-target-input="nearest"
+                      >
+                        <input
+                          type="text"
+                          className="form-control border-0 datetimepicker-input"
+                          placeholder="Choose Date"
+                          data-target="#time"
+                          data-toggle="datetimepicker"
+                          style={{ height: 55 }}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <textarea
+                        className="form-control border-0"
+                        rows={5}
+                        placeholder="Describe your problem"
+                        defaultValue={""}
+                      />
+                    </div>
+                    <div className="col-12">
+                      <button
+                        className="btn btn-primary w-100 py-3"
+                        type="submit"
+                      >
+                        Book Appointment
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        {/* Footer End */}
-        {/* Back to Top */}
-        <a
-          href="#"
-          className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-        >
-          <i className="bi bi-arrow-up" />
-        </a>
-        {/* JavaScript Libraries */}
-        {/* Template Javascript */}
       </div>
+      {/* Appointment End */}
+      {/* Testimonial Start */}
+      <Testimonial />
+      {/* Testimonial End */}
+      {/* Footer Start */}
+      <Footer />
+      {/* Footer End */}
+      {/* Back to Top */}
+      <a
+        href="#"
+        className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      >
+        <i className="bi bi-arrow-up" />
+      </a>
+      {/* JavaScript Libraries */}
+      {/* Template Javascript */}
     </div>
   );
 };
