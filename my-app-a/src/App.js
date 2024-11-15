@@ -7,8 +7,13 @@ import Header from "./components/Header";
 import Feature from "./components/Feature";
 import Footer from "./components/Footer";
 import About from "./components/About";
+<<<<<<< HEAD
 import Article from "./components/Article";
 import Appointment from "./components/Appointment";
+=======
+import Appointment from "./components/Footer";
+import Article from "./components/Footer";
+>>>>>>> master
 
 const App = () => {
   return (

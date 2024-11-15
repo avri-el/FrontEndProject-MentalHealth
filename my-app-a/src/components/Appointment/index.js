@@ -9,12 +9,9 @@ const Appointment = () => {
             </p>
             <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
             <p className="mb-4">
-              Taking the first step towards mental well-being is just a click
-              away. Make an appointment to visit one of our experienced doctors
-              today and begin your journey towards healing. Our compassionate
-              team is here to listen, understand, and provide the support you
-              need. Don’t wait—your mental health is important, and we’re here
-              to help you every step of the way
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+              lorem sit clita duo justo magna dolore erat amet
             </p>
             <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
               <div
@@ -25,7 +22,7 @@ const Appointment = () => {
               </div>
               <div className="ms-4">
                 <p className="mb-2">Call Us Now</p>
-                <h5 className="mb-0">+62 345 6789</h5>
+                <h5 className="mb-0">+012 345 6789</h5>
               </div>
             </div>
             <div className="bg-light rounded d-flex align-items-center p-5">
@@ -37,7 +34,7 @@ const Appointment = () => {
               </div>
               <div className="ms-4">
                 <p className="mb-2">Mail Us Now</p>
-                <h5 className="mb-0">mentalhealth@gmail.com</h5>
+                <h5 className="mb-0">info@example.com</h5>
               </div>
             </div>
           </div>

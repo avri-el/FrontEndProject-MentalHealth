@@ -8,12 +8,12 @@ const About = () => {
               <img
                 className="img-fluid rounded w-75 align-self-end"
                 src="img/about-1.jpg"
-                alt
+                alt=""
               />
               <img
                 className="img-fluid rounded w-50 bg-white pt-3 pe-3"
                 src="img/about-2.jpg"
-                alt
+                alt=""
                 style={{ marginTop: "-25%" }}
               />
             </div>
@@ -26,11 +26,11 @@ const About = () => {
               Why You Should Trust Us? Get Know About Us!
             </h1>
             <p>
-              We are dedicated to providing you with reliable, professional,
-              professional, and compassionate support for your mental well-
-              being. Our platform connects you with qualified mental health
-              experts, offering a wide range of resources such as articles,
-              video content, self-care tips, and personal success stories.
+              We are dedicated to providing you with reliable, professional, and
+              compassionate support for your mental well-being. Our platform
+              connects you with qualified mental health experts, offering a wide
+              range of resources such as articles, video content, self-care
+              tips, and personal success stories.
             </p>
             <p className="mb-4">
               Whether you're dealing with stress, anxiety, or simply looking to
@@ -52,7 +52,7 @@ const About = () => {
               <i className="far fa-check-circle text-primary me-3" />
               Medical Research Professionals
             </p>
-            <a className="btn btn-primary rounded-pill py-3 px-5 mt-3" href>
+            <a className="btn btn-primary rounded-pill py-3 px-5 mt-3" href="#">
               Read More
             </a>
           </div>
