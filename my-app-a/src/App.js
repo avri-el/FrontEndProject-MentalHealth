@@ -13,28 +13,16 @@ import Appointment from "./components/Appointment";
 const App = () => {
   return (
     <div>
-      {/* <Spinner /> */}
       <Topbar />
       <Navbar />
       <Header />
       <About />
       <Article />
-      {/* Feature Start */}
       <Feature />
-      {/* Feature Start */}
-      {/* Team Start */}
       <Team />
-      {/* Team End */}
-      {/* Appointment Start */}
       <Appointment />
-      {/* Appointment End */}
-      {/* Testimonial Start */}
       <Testimonial />
-      {/* Testimonial End */}
-      {/* Footer Start */}
       <Footer />
-      {/* Footer End */}
-      {/* Back to Top */}
       <a
         href="#"
         className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"

@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-3" />
-              mentalhealth@example.com
+              mentalhealth@gmail.com
             </p>
             <div className="d-flex pt-2">
               <a
