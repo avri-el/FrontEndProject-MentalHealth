@@ -16,12 +16,6 @@ const Article = () => {
           {/* Self-Care & Stress Management */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <div
-                className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
-                style={{ width: 65, height: 65 }}
-              >
-                <i className="fa fa-smile text-primary fs-4" />
-              </div>
               <h4 className="mb-3">Self-Care &amp; Stress Management</h4>
               <p className="mb-4">
                 <a
@@ -45,12 +39,6 @@ const Article = () => {
           {/* Visual & Audio Content */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <div
-                className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
-                style={{ width: 65, height: 65 }}
-              >
-                <i className="fa fa-play-circle text-primary fs-4" />
-              </div>
               <h4 className="mb-3">Visual &amp; Audio Content</h4>
               <p className="mb-4">
                 <a
@@ -74,12 +62,6 @@ const Article = () => {
           {/* Articles on Mental Health Topics */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <div
-                className="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
-                style={{ width: 65, height: 65 }}
-              >
-                <i className="fa fa-newspaper text-primary fs-4" />
-              </div>
               <h4 className="mb-3">Mental Health Articles</h4>
               <a
                 href="https://www.pinerest.org/newsroom/articles/mental-health-awareness-blog/"

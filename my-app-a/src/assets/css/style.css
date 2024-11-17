@@ -78,7 +78,7 @@
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
   border: none;
-  content: "\f107";
+  content: "\f107"; /* Ikon dropdown dari Font Awesome */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   vertical-align: middle;
@@ -360,34 +360,10 @@
 }
 
 /*** Testimonial ***/
-.testimonial-carousel::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  z-index: 1;
-}
-
+.testimonial-carousel::before,
 .testimonial-carousel::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  z-index: 1;
+  background: none; /* Menghapus gradasi */
+  width: 0; /* Menghilangkan efek elemen */
 }
 
 @media (min-width: 768px) {

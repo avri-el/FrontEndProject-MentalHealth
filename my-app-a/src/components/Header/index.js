@@ -11,21 +11,9 @@ const Header = () => {
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
           <div className="owl-carousel header-carousel">
             <div className="owl-carousel-item position-relative">
-              <img className="img-fluid" src="img/carousel-1.jpg" alt />
-              <div className="owl-carousel-text">
-                <h1 className="display-1 text-white mb-0">Balance</h1>
-              </div>
-            </div>
-            <div className="owl-carousel-item position-relative">
               <img className="img-fluid" src="img/carousel-2.jpg" alt />
               <div className="owl-carousel-text">
                 <h1 className="display-1 text-white mb-0">Calm</h1>
-              </div>
-            </div>
-            <div className="owl-carousel-item position-relative">
-              <img className="img-fluid" src="img/carousel-3.jpg" alt />
-              <div className="owl-carousel-text">
-                <h1 className="display-1 text-white mb-0">Support</h1>
               </div>
             </div>
           </div>
