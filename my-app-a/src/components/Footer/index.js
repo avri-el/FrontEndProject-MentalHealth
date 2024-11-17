@@ -13,7 +13,7 @@ const Footer = () => {
             </p>
             <p className="mb-2">
               <i className="fa fa-phone-alt me-3" />
-              +62 345 67890
+              +62 8345 67890
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-3" />

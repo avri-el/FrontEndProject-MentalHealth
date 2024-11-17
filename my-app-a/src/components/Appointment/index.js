@@ -9,9 +9,8 @@ const Appointment = () => {
             </p>
             <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
             <p className="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+              Have questions or need support? Reach out to us anytime, and our
+              team will be here to guide you with care and understanding.
             </p>
             <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
               <div
