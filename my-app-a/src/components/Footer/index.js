@@ -24,25 +24,57 @@ const Footer = () => {
                 className="btn btn-outline-light btn-social rounded-circle"
                 href
               >
-                <i className="fab fa-twitter" />
+                <img
+                  src="/img/Twitter_Logo.png"
+                  alt="Twitter"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </a>
               <a
                 className="btn btn-outline-light btn-social rounded-circle"
                 href
               >
-                <i className="fab fa-facebook-f" />
+                <img
+                  src="/img/Facebook_Logo.png"
+                  alt="Facebook"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </a>
               <a
                 className="btn btn-outline-light btn-social rounded-circle"
                 href
               >
-                <i className="fab fa-youtube" />
+                <img
+                  src="/img/Youtube_Logo.png"
+                  alt="YouTube"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </a>
               <a
                 className="btn btn-outline-light btn-social rounded-circle"
                 href
               >
-                <i className="fab fa-linkedin-in" />
+                <img
+                  src="/img/LinkedIn_Logo.png"
+                  alt="LinkedIn"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </a>
             </div>
           </div>
