@@ -18,19 +18,36 @@ const Appointment = () => {
                 className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
                 style={{ width: 55, height: 55 }}
               >
-                <i className="fa fa-phone-alt text-primary" />
+                <img
+                  src="/img/CallUs.png"
+                  alt="Call Us"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </div>
               <div className="ms-4">
                 <p className="mb-2">Call Us Now</p>
                 <h5 className="mb-0">+012 345 6789</h5>
               </div>
             </div>
+
             <div className="bg-light rounded d-flex align-items-center p-5">
               <div
                 className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
                 style={{ width: 55, height: 55 }}
               >
-                <i className="fa fa-envelope-open text-primary" />
+                <img
+                  src="/img/EmailUs.png"
+                  alt="Mail Us"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%",
+                  }}
+                />
               </div>
               <div className="ms-4">
                 <p className="mb-2">Mail Us Now</p>
