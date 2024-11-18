@@ -4,6 +4,7 @@ import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur im
 
 const Testimonial = () => {
   const [Testimoni, setTestimoni] = useState({});
+  const [namaTesti, setnamaTesti] = useState({});
 
   useEffect(() => {
     const TestimoniRef = ref(database, "Testimoni/"); // Gunakan instance database yang sudah diinisialisasi
@@ -11,7 +12,11 @@ const Testimonial = () => {
       const data = snapshot.val();
       setTestimoni(data);
     });
-
+    const namaTestiRef = ref(database, "namaTesti/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(namaTestiRef, (snapshot) => {
+      const data = snapshot.val();
+      setnamaTesti(data);
+    });
   }, []);
 
   return (
@@ -39,7 +44,7 @@ const Testimonial = () => {
             />
             <div className="testimonial-text rounded text-center p-4">
               <p>{Testimoni.user1}</p>
-              <h5 className="mb-1">Izabelle Margarette</h5>
+              <h5 className="mb-1">{namaTesti.person1}</h5>
               <span className="fst-italic">Accountant</span>
             </div>
           </div>
@@ -51,7 +56,7 @@ const Testimonial = () => {
             />
             <div className="testimonial-text rounded text-center p-4">
               <p>{Testimoni.user2}</p>
-              <h5 className="mb-1">James Kavinsky</h5>
+              <h5 className="mb-1">{namaTesti.person2}</h5>
               <span className="fst-italic">Videographer</span>
             </div>
           </div>
@@ -63,7 +68,7 @@ const Testimonial = () => {
             />
             <div className="testimonial-text rounded text-center p-4">
               <p>{Testimoni.user3}</p>
-              <h5 className="mb-1">Jonathan Rodriges</h5>
+              <h5 className="mb-1">{namaTesti.person3}</h5>
               <span className="fst-italic">Technician</span>
             </div>
           </div>
