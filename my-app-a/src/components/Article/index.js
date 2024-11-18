@@ -1,4 +1,30 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase";
+
 const Article = () => {
+  const [article1, setArticle1] = useState({});
+  const [article2, setArticle2] = useState({});
+  const [article3, setArticle3] = useState({});
+
+  useEffect(() => {
+    const article1Ref = ref(database, "article1/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(article1Ref, (snapshot) => {
+      const data = snapshot.val();
+      setArticle1(data);
+    });
+    const article2Ref = ref(database, "article2/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(article2Ref, (snapshot) => {
+      const data = snapshot.val();
+      setArticle2(data);
+    });
+    const article3Ref = ref(database, "article3/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(article3Ref, (snapshot) => {
+      const data = snapshot.val();
+      setArticle3(data);
+    });
+  }, []);
+
   return (
     <div className="container-xxl py-5">
       <div className="container">
@@ -16,7 +42,7 @@ const Article = () => {
           {/* Self-Care & Stress Management */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <h4 className="mb-3">Self-Care &amp; Stress Management</h4>
+              <h4 className="mb-3">{article1.title}</h4>
               <p className="mb-4">
                 <a
                   href="https://mentalhealthyfit.org/thinky/2024/4/8/identifying-and-managing-stress?gad_source=1&gclid=CjwKCAiAudG5BhAREiwAWMlSjGNT56prgisSuaoY5hwcV7sDFnob0Rxz6x_SJzPuf_9Z1FT_wgFngBoCHtcQAvD_BwE"
@@ -26,9 +52,7 @@ const Article = () => {
                   Tips For Stress Identification and Management (Article){" "}
                 </a>
                 <br />
-                Tips and techniques to help you manage stress and maintain your
-                mental well-being. Learn how to cope with everyday challenges
-                and prioritize self-care.
+                {article1.paragraph}
               </p>
               <a className="btn" href>
                 <i className="fa fa-plus text-primary me-3" />
@@ -39,7 +63,7 @@ const Article = () => {
           {/* Visual & Audio Content */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <h4 className="mb-3">Visual &amp; Audio Content</h4>
+              <h4 className="mb-3">{article2.title}</h4>
               <p className="mb-4">
                 <a
                   href="https://www.youtube.com/watch?v=dBn0ETS6XDk"
@@ -49,9 +73,7 @@ const Article = () => {
                   Self Care: What It Really Is (YouTube){" "}
                 </a>
                 <br />
-                Access engaging videos and audio content from platforms like
-                YouTube to explore various health topics. Learn in a fun and
-                interactive way.
+                {article2.paragraph}
               </p>
               <a className="btn" href>
                 <i className="fa fa-plus text-primary me-3" />
@@ -62,7 +84,7 @@ const Article = () => {
           {/* Articles on Mental Health Topics */}
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div className="service-item bg-light rounded h-100 p-5">
-              <h4 className="mb-3">Mental Health Articles</h4>
+              <h4 className="mb-3">{article3.title}</h4>
               <a
                 href="https://www.pinerest.org/newsroom/articles/mental-health-awareness-blog/"
                 target="_blank"
@@ -71,11 +93,7 @@ const Article = () => {
                 The Importance of Mental Health Awareness (Article){" "}
               </a>
               <br />
-              <p className="mb-4">
-                Explore articles covering a range of mental health topics, from
-                understanding mental health issues to learning positive coping
-                strategies. Get the knowledge and support you need.
-              </p>
+              <p className="mb-4">{article3.paragraph}</p>
               <a className="btn" href>
                 <i className="fa fa-plus text-primary me-3" />
                 Read More
