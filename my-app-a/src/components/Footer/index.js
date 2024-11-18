@@ -1,4 +1,18 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+
 const Footer = () => {
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    const footerRef = ref(database, "footer/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(footerRef, (snapshot) => {
+      const data = snapshot.val();
+      setFooter(data);
+    });
+  }, []);
+
   return (
     <div
       className="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn"
@@ -9,15 +23,15 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <p className="mb-2">
               <i className="fa fa-map-marker-alt me-3" />
-              Jl. Sudirman No. 45, Jakarta Selatan, 12930, Indonesia
+              {footer.address}
             </p>
             <p className="mb-2">
               <i className="fa fa-phone-alt me-3" />
-              +62 8345 67890
+              {footer.phone}
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-3" />
-              mentalhealth@gmail.com
+              {footer.email}
             </p>
             <div className="d-flex pt-2">
               <a
@@ -98,10 +112,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6">
             <h5 className="text-light mb-4">Newsletter</h5>
-            <p>
-              Subscribe to our newsletter for the latest updates and tips on
-              mental well-being.
-            </p>
+            <p>{footer.subs_newsletter}</p>
             <div
               className="position-relative mx-auto"
               style={{ maxWidth: 400 }}
@@ -125,14 +136,14 @@ const Footer = () => {
         <div className="copyright">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              ©
+              <span className="me-1">©</span>
               <a className="border-bottom" href="#">
                 Mental Health Consultant
               </a>
               , All Right Reserved.
             </div>
             <div className="col-md-6 text-center text-md-end">
-              Designed By
+              <span className="me-1">Designed By</span>
               <a className="border-bottom" href="https://htmlcodex.com">
                 HTML Codex
               </a>

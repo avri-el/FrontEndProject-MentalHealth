@@ -1,4 +1,18 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+
 const Feature = () => {
+  const [feature, setFeature] = useState({});
+
+  useEffect(() => {
+    const featureRef = ref(database, "feature/");
+    onValue(featureRef, (snapshot) => {
+      const data = snapshot.val();
+      setFeature(data);
+    });
+  }, []);
+
   return (
     <div className="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
       <div className="container feature px-lg-0">
@@ -11,14 +25,9 @@ const Feature = () => {
               <p className="d-inline-block border rounded-pill text-light py-1 px-4">
                 Programs
               </p>
-              <h1 className="text-white mb-4">
-                Mental Health Programs and Support
-              </h1>
+              <h1 className="text-white mb-4">{feature.programs}</h1>
               <p className="text-white mb-4 pb-2">
-                We offer a variety of mental health programs, support groups,
-                and workshops that you can join to receive support and improve
-                your mental well-being. Join us for a positive and enriching
-                experience.
+                {feature.programs_offerings}
               </p>
               <div className="row g-4">
                 <div className="col-6">
