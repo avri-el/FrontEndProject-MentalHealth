@@ -1,4 +1,23 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase";
+
 const Appointment = () => {
+  const [Appointment, setAppointment] = useState({});
+  const [Info, setInfo] = useState({});
+
+  useEffect(() => {
+    const AppointmentRef = ref(database, "Appointment/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(AppointmentRef, (snapshot) => {
+      const data = snapshot.val();
+      setAppointment(data);
+    });
+    const InfoRef = ref(database, "Info/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(InfoRef, (snapshot) => {
+      const data = snapshot.val();
+      setInfo(data);
+    });
+  }, []);
   return (
     <div className="container-xxl py-5">
       <div className="container">
@@ -7,11 +26,8 @@ const Appointment = () => {
             <p className="d-inline-block border rounded-pill py-1 px-4">
               Appointment
             </p>
-            <h1 className="mb-4">Make An Appointment To Visit Our Doctor</h1>
-            <p className="mb-4">
-              Have questions or need support? Reach out to us anytime, and our
-              team will be here to guide you with care and understanding.
-            </p>
+            <h1 className="mb-4">{Appointment.title}</h1>
+            <p className="mb-4">{Appointment.paragraph}</p>
             <div className="bg-light rounded d-flex align-items-center p-5 mb-4">
               <div
                 className="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
@@ -50,7 +66,7 @@ const Appointment = () => {
               </div>
               <div className="ms-4">
                 <p className="mb-2">Mail Us Now</p>
-                <h5 className="mb-0">info@example.com</h5>
+                <h5 className="mb-0">{Info.email}</h5>
               </div>
             </div>
           </div>
