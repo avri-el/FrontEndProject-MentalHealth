@@ -45,7 +45,7 @@ const Appointment = () => {
               </div>
               <div className="ms-4">
                 <p className="mb-2">Call Us Now</p>
-                <h5 className="mb-0">+012 345 6789</h5>
+                <h5 className="mb-0">{Info.telepon}</h5>
               </div>
             </div>
 
