@@ -51,17 +51,6 @@ const Team = () => {
                 <div className="team-text bg-light text-center p-4">
                   <h5>{nama_dokter.nama1}</h5>
                   <p className="text-primary">Clinical Psychology</p>
-                  <div className="team-social text-center">
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -83,17 +72,6 @@ const Team = () => {
                 <div className="team-text bg-light text-center p-4">
                   <h5>{nama_dokter.nama2}</h5>
                   <p className="text-primary">Developmental Psychology</p>
-                  <div className="team-social text-center">
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -115,17 +93,6 @@ const Team = () => {
                 <div className="team-text bg-light text-center p-4">
                   <h5>{nama_dokter.nama3}</h5>
                   <p className="text-primary">Counseling Psychology</p>
-                  <div className="team-social text-center">
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -147,17 +114,6 @@ const Team = () => {
                 <div className="team-text bg-light text-center p-4">
                   <h5>{nama_dokter.nama4}</h5>
                   <p className="text-primary">Health Psychology</p>
-                  <div className="team-social text-center">
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a className="btn btn-square" href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
