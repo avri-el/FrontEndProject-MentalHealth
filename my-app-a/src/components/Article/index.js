@@ -61,8 +61,7 @@ const Article = () => {
                   {article1.paragraph}
                 </p>
                 <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />
-                  Read More
+                  <i className="fa fa-plus text-primary me-3" />* Read More
                 </a>
               </div>
             </div>
@@ -85,8 +84,7 @@ const Article = () => {
                   {article2.paragraph}
                 </p>
                 <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />
-                  Read More
+                  <i className="fa fa-plus text-primary me-3" />* Read More
                 </a>
               </div>
             </div>
@@ -107,8 +105,7 @@ const Article = () => {
                 <br />
                 <p className="mb-4">{article3.paragraph}</p>
                 <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />
-                  Read More
+                  <i className="fa fa-plus text-primary me-3" />* Read More
                 </a>
               </div>
             </div>
