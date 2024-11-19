@@ -10,22 +10,6 @@ const Navbar = () => {
       >
         <h1 className="m-0 text-primary">MHC</h1>
       </a>
-      <button
-        type="button"
-        className="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarCollapse">
-        <a
-          href
-          className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
-        >
-          Appointment
-        </a>
-      </div>
     </nav>
   );
 };
