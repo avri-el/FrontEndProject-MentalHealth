@@ -60,9 +60,6 @@ const Article = () => {
                   <br />
                   {article1.paragraph}
                 </p>
-                <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />* Read More
-                </a>
               </div>
             </div>
             {/* Visual & Audio Content */}
@@ -83,9 +80,6 @@ const Article = () => {
                   <br />
                   {article2.paragraph}
                 </p>
-                <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />* Read More
-                </a>
               </div>
             </div>
             {/* Articles on Mental Health Topics */}
@@ -104,9 +98,6 @@ const Article = () => {
                 </a>
                 <br />
                 <p className="mb-4">{article3.paragraph}</p>
-                <a className="btn" href>
-                  <i className="fa fa-plus text-primary me-3" />* Read More
-                </a>
               </div>
             </div>
           </div>
