@@ -12,6 +12,7 @@ const About = () => {
       setAbout(data);
     });
   }, []);
+  
   return (
     <div className="container-xxl py-5">
       <div className="container">

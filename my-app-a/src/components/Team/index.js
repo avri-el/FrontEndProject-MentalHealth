@@ -76,7 +76,7 @@ const Team = () => {
                 <div className="overflow-hidden">
                   <img
                     className="img-fluid"
-                    src="img/team-2.jpg"
+                    src={`data:image/jpeg;base64, ${teamImage.team2}`}
                     alt="Doctor 2"
                   />
                 </div>
@@ -108,7 +108,7 @@ const Team = () => {
                 <div className="overflow-hidden">
                   <img
                     className="img-fluid"
-                    src="img/team-3.jpg"
+                    src={`data:image/jpeg;base64, ${teamImage.team3}`}
                     alt="Doctor 3"
                   />
                 </div>
@@ -140,7 +140,7 @@ const Team = () => {
                 <div className="overflow-hidden">
                   <img
                     className="img-fluid"
-                    src="img/team-4.jpg"
+                    src={`data:image/jpeg;base64, ${teamImage.team4}`}
                     alt="Doctor 4"
                   />
                 </div>
