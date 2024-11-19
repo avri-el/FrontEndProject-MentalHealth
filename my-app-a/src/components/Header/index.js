@@ -22,7 +22,11 @@ const Header = () => {
         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
           <div className="owl-carousel header-carousel">
             <div className="owl-carousel-item position-relative">
-              <img className="img-fluid" src="img/carousel-2.jpg" alt />
+              <img
+                className="img-fluid"
+                src={`data:image/jpeg;base64, ${header.img}`}
+                alt
+              />
               <div className="owl-carousel-text">
                 <h1 className="display-1 text-white mb-0">{header.h1img}</h1>
               </div>
