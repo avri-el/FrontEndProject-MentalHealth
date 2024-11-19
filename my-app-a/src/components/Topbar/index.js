@@ -34,32 +34,6 @@ const Topbar = () => {
             <small className="fa fa-phone-alt text-primary me-2" />
             <small>{Info.telepon}</small>
           </div>
-          <div className="h-100 d-inline-flex align-items-center">
-            <a
-              className="btn btn-sm-square rounded-circle bg-white text-primary me-1"
-              href
-            >
-              <i className="fab fa-facebook-f" />
-            </a>
-            <a
-              className="btn btn-sm-square rounded-circle bg-white text-primary me-1"
-              href
-            >
-              <i className="fab fa-twitter" />
-            </a>
-            <a
-              className="btn btn-sm-square rounded-circle bg-white text-primary me-1"
-              href
-            >
-              <i className="fab fa-linkedin-in" />
-            </a>
-            <a
-              className="btn btn-sm-square rounded-circle bg-white text-primary me-0"
-              href
-            >
-              <i className="fab fa-instagram" />
-            </a>
-          </div>
         </div>
       </div>
     </div>
