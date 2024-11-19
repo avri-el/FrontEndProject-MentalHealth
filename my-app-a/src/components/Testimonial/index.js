@@ -5,6 +5,7 @@ import { database } from "../../config/Firebase/firebase";
 const Testimonial = () => {
   const [Testimoni, setTestimoni] = useState({});
   const [namaTesti, setnamaTesti] = useState({});
+  const [testimonialImage, setTestimonialImage] = useState({}); // Untuk gambar
 
   useEffect(() => {
     const TestimoniRef = ref(database, "Testimoni/");
@@ -16,6 +17,12 @@ const Testimonial = () => {
     onValue(namaTestiRef, (snapshot) => {
       const data = snapshot.val();
       setnamaTesti(data);
+    });
+
+    const testimonialImageRef = ref(database, "testimonialImage/");
+    onValue(testimonialImageRef, (snapshot) => {
+      const data = snapshot.val();
+      setTestimonialImage(data);
     });
   }, []);
 

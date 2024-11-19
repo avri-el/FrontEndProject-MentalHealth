@@ -5,6 +5,7 @@ import { database } from "../../config/Firebase/firebase";
 const Appointment = () => {
   const [Appointment, setAppointment] = useState({});
   const [Info, setInfo] = useState({});
+  const [appointmentImage, setAppointmentImage] = useState({}); // Untuk gambar
 
   useEffect(() => {
     const AppointmentRef = ref(database, "Appointment/");
@@ -16,6 +17,12 @@ const Appointment = () => {
     onValue(InfoRef, (snapshot) => {
       const data = snapshot.val();
       setInfo(data);
+    });
+
+    const appointmentImageRef = ref(database, "appointmentImage/");
+    onValue(appointmentImageRef, (snapshot) => {
+      const data = snapshot.val();
+      setAppointmentImage(data);
     });
   }, []);
   return (
@@ -34,7 +41,7 @@ const Appointment = () => {
                 style={{ width: 55, height: 55 }}
               >
                 <img
-                  src="/img/CallUs.png"
+                  src={`data:image/jpeg;base64, ${appointmentImage.callUs}`}
                   alt="Call Us"
                   style={{
                     width: "30px",
