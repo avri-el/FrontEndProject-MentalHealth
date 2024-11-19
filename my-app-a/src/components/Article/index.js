@@ -8,17 +8,17 @@ const Article = () => {
   const [article3, setArticle3] = useState({});
 
   useEffect(() => {
-    const article1Ref = ref(database, "article1/"); // Gunakan instance database yang sudah diinisialisasi
+    const article1Ref = ref(database, "article1/");
     onValue(article1Ref, (snapshot) => {
       const data = snapshot.val();
       setArticle1(data);
     });
-    const article2Ref = ref(database, "article2/"); // Gunakan instance database yang sudah diinisialisasi
+    const article2Ref = ref(database, "article2/");
     onValue(article2Ref, (snapshot) => {
       const data = snapshot.val();
       setArticle2(data);
     });
-    const article3Ref = ref(database, "article3/"); // Gunakan instance database yang sudah diinisialisasi
+    const article3Ref = ref(database, "article3/");
     onValue(article3Ref, (snapshot) => {
       const data = snapshot.val();
       setArticle3(data);

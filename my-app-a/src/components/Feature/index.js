@@ -1,6 +1,6 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Feature = () => {
   const [feature, setFeature] = useState({});

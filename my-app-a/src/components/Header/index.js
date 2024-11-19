@@ -1,12 +1,12 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Header = () => {
   const [header, setHeader] = useState({});
 
   useEffect(() => {
-    const headerRef = ref(database, "header/"); // Gunakan instance database yang sudah diinisialisasi
+    const headerRef = ref(database, "header/");
     onValue(headerRef, (snapshot) => {
       const data = snapshot.val();
       setHeader(data);

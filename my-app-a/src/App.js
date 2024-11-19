@@ -1,4 +1,3 @@
-// import Spinner from "./components/Spinner";
 import Topbar from "./components/Topbar";
 import Team from "./components/Team";
 import Testimonial from "./components/Testimonial";
@@ -29,8 +28,6 @@ const App = () => {
       >
         <i className="bi bi-arrow-up" />
       </a>
-      {/* JavaScript Libraries */}
-      {/* Template Javascript */}
     </div>
   );
 };

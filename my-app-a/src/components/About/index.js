@@ -1,18 +1,18 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const About = () => {
   const [About, setAbout] = useState({});
 
   useEffect(() => {
-    const AboutRef = ref(database, "About/"); // Gunakan instance database yang sudah diinisialisasi
+    const AboutRef = ref(database, "About/");
     onValue(AboutRef, (snapshot) => {
       const data = snapshot.val();
       setAbout(data);
     });
   }, []);
-  
+
   return (
     <div className="container-xxl py-5">
       <div className="container">

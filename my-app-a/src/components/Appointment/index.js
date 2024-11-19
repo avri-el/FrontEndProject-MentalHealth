@@ -7,12 +7,12 @@ const Appointment = () => {
   const [Info, setInfo] = useState({});
 
   useEffect(() => {
-    const AppointmentRef = ref(database, "Appointment/"); // Gunakan instance database yang sudah diinisialisasi
+    const AppointmentRef = ref(database, "Appointment/");
     onValue(AppointmentRef, (snapshot) => {
       const data = snapshot.val();
       setAppointment(data);
     });
-    const InfoRef = ref(database, "Info/"); // Gunakan instance database yang sudah diinisialisasi
+    const InfoRef = ref(database, "Info/");
     onValue(InfoRef, (snapshot) => {
       const data = snapshot.val();
       setInfo(data);

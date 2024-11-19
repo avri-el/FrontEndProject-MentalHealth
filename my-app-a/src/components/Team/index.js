@@ -1,10 +1,10 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Team = () => {
   const [nama_dokter, setNamaDokter] = useState({});
-  const [teamImage, setTeamImage] = useState({}); // Untuk gambar
+  const [teamImage, setTeamImage] = useState({});
 
   useEffect(() => {
     const nama_dokterRef = ref(database, "nama_dokter/");

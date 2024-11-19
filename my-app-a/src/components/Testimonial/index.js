@@ -1,18 +1,18 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Testimonial = () => {
   const [Testimoni, setTestimoni] = useState({});
   const [namaTesti, setnamaTesti] = useState({});
 
   useEffect(() => {
-    const TestimoniRef = ref(database, "Testimoni/"); // Gunakan instance database yang sudah diinisialisasi
+    const TestimoniRef = ref(database, "Testimoni/");
     onValue(TestimoniRef, (snapshot) => {
       const data = snapshot.val();
       setTestimoni(data);
     });
-    const namaTestiRef = ref(database, "namaTesti/"); // Gunakan instance database yang sudah diinisialisasi
+    const namaTestiRef = ref(database, "namaTesti/");
     onValue(namaTestiRef, (snapshot) => {
       const data = snapshot.val();
       setnamaTesti(data);

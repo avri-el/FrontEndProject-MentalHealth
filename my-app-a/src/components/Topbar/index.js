@@ -1,12 +1,12 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Topbar = () => {
   const [Info, setInfo] = useState({});
 
   useEffect(() => {
-    const InfoRef = ref(database, "Info/"); // Gunakan instance database yang sudah diinisialisasi
+    const InfoRef = ref(database, "Info/");
     onValue(InfoRef, (snapshot) => {
       const data = snapshot.val();
       setInfo(data);

@@ -1,13 +1,13 @@
 import { ref, onValue } from "firebase/database";
 import { useEffect, useState } from "react";
-import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur impor dengan struktur folder Anda
+import { database } from "../../config/Firebase/firebase";
 
 const Footer = () => {
   const [footer, setFooter] = useState({});
-  const [logo, setLogo] = useState({}); // Untuk gambar
+  const [logo, setLogo] = useState({});
 
   useEffect(() => {
-    const footerRef = ref(database, "footer/"); // Gunakan instance database yang sudah diinisialisasi
+    const footerRef = ref(database, "footer/");
     onValue(footerRef, (snapshot) => {
       const data = snapshot.val();
       setFooter(data);
