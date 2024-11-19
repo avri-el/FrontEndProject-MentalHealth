@@ -46,7 +46,7 @@ const Testimonial = () => {
           <div className="testimonial-item text-center">
             <img
               className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-              src={`data:image/jpeg;base64, ${testimonialImage.t1}`}
+              src={`data:image/jpeg;base64, ${Testimoni.img1}`}
               style={{ width: 100, height: 100 }}
             />
             <div className="testimonial-text rounded text-center p-4">
@@ -58,7 +58,7 @@ const Testimonial = () => {
           <div className="testimonial-item text-center">
             <img
               className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-              src="img/testimonial-2.jpg"
+              src={`data:image/jpeg;base64, ${Testimoni.img2}`}
               style={{ width: 100, height: 100 }}
             />
             <div className="testimonial-text rounded text-center p-4">
@@ -70,7 +70,7 @@ const Testimonial = () => {
           <div className="testimonial-item text-center">
             <img
               className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-              src="img/testimonial-3.jpg"
+              src={`data:image/jpeg;base64, ${Testimoni.img3}`}
               style={{ width: 100, height: 100 }}
             />
             <div className="testimonial-text rounded text-center p-4">

@@ -4,12 +4,18 @@ import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur im
 
 const Footer = () => {
   const [footer, setFooter] = useState({});
+  const [logo, setLogo] = useState({}); // Untuk gambar
 
   useEffect(() => {
     const footerRef = ref(database, "footer/"); // Gunakan instance database yang sudah diinisialisasi
     onValue(footerRef, (snapshot) => {
       const data = snapshot.val();
       setFooter(data);
+    });
+    const logoRef = ref(database, "logo/");
+    onValue(logoRef, (snapshot) => {
+      const data = snapshot.val();
+      setLogo(data);
     });
   }, []);
 
@@ -39,7 +45,7 @@ const Footer = () => {
                 href
               >
                 <img
-                  src="/img/Twitter_Logo.png"
+                  src={`data:image/jpeg;base64, ${logo.twt}`}
                   alt="Twitter"
                   style={{
                     width: "30px",
@@ -53,7 +59,7 @@ const Footer = () => {
                 href
               >
                 <img
-                  src="/img/Facebook_Logo.png"
+                  src={`data:image/jpeg;base64, ${logo.fb}`}
                   alt="Facebook"
                   style={{
                     width: "30px",
@@ -67,7 +73,7 @@ const Footer = () => {
                 href
               >
                 <img
-                  src="/img/Youtube_Logo.png"
+                  src={`data:image/jpeg;base64, ${logo.youtube}`}
                   alt="YouTube"
                   style={{
                     width: "30px",
@@ -81,7 +87,7 @@ const Footer = () => {
                 href
               >
                 <img
-                  src="/img/LinkedIn_Logo.png"
+                  src={`data:image/jpeg;base64, ${logo.linkedin}`}
                   alt="LinkedIn"
                   style={{
                     width: "30px",
