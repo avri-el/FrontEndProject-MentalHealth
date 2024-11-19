@@ -4,12 +4,19 @@ import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur im
 
 const About = () => {
   const [About, setAbout] = useState({});
+  const [aboutImage, setAboutImage] = useState({}); // Untuk gambar
 
   useEffect(() => {
     const AboutRef = ref(database, "About/"); // Gunakan instance database yang sudah diinisialisasi
     onValue(AboutRef, (snapshot) => {
       const data = snapshot.val();
       setAbout(data);
+    });
+
+    const aboutImageRef = ref(database, "aboutImage/");
+    onValue(aboutImageRef, (snapshot) => {
+      const data = snapshot.val();
+      setAboutImage(data);
     });
   }, []);
   return (
@@ -20,12 +27,12 @@ const About = () => {
             <div className="d-flex flex-column">
               <img
                 className="img-fluid rounded w-75 align-self-end"
-                src="img/about-1.jpg"
+                src={`data:image/jpeg;base64, ${aboutImage.about1}`}
                 alt=""
               />
               <img
                 className="img-fluid rounded w-50 bg-white pt-3 pe-3"
-                src="img/about-2.jpg"
+                src={`data:image/jpeg;base64, ${aboutImage.about2}`}
                 alt=""
                 style={{ marginTop: "-25%" }}
               />

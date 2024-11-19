@@ -5,6 +5,7 @@ import { database } from "../../config/Firebase/firebase"; // Sesuaikan jalur im
 const Testimonial = () => {
   const [Testimoni, setTestimoni] = useState({});
   const [namaTesti, setnamaTesti] = useState({});
+  const [testimonialImage, setTestimonialImage] = useState({}); // Untuk gambar
 
   useEffect(() => {
     const TestimoniRef = ref(database, "Testimoni/"); // Gunakan instance database yang sudah diinisialisasi
@@ -16,6 +17,12 @@ const Testimonial = () => {
     onValue(namaTestiRef, (snapshot) => {
       const data = snapshot.val();
       setnamaTesti(data);
+    });
+
+    const testimonialImageRef = ref(database, "testimonialImage/");
+    onValue(testimonialImageRef, (snapshot) => {
+      const data = snapshot.val();
+      setTestimonialImage(data);
     });
   }, []);
 
@@ -39,7 +46,7 @@ const Testimonial = () => {
           <div className="testimonial-item text-center">
             <img
               className="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
-              src="img/testimonial-1.jpg"
+              src={`data:image/jpeg;base64, ${testimonialImage.t1}`}
               style={{ width: 100, height: 100 }}
             />
             <div className="testimonial-text rounded text-center p-4">
