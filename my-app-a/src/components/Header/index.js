@@ -1,5 +1,5 @@
 import { ref, onValue } from "firebase/database";
-import { useEffect, useState } from "react";
+import { useEffect, useState, CSSProperties } from "react";
 import { database } from "../../config/Firebase/firebase";
 
 const Header = () => {
